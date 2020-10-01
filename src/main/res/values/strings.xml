@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">HangmanGmae</string>
+    <string name="new_game">New Game</string>
+    <string name="score">Score</string>
+    <string name="rules">Rules</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="Title">Jeu du pendu</string>
+    <string name="Icon">hangmanIcon.jpg</string>
+
+    <string name="Goal">Vous avez 7 coups pour trouver le mot cach\u00e9! Et si vous r\u00e9ussissez : on recommence !\nPlus vous avez trouv\u00e9 de mots, plus votre score grandira: Alors \u00e0 vous de jouer.\n</string>
+
+    <string name="Home.Header">Bienvenue dans le jeu du PENDU\n</string>
+    <string name="Home.Footer">PROVERBE : "Pas vu, pas pris"\n Pris! PENDU!!!\n</string>
+
+    <string name="Score.Header">Le Jeu du PENDU\n</string>
+    <string name="Score.Title">COMPTE DES POINTS:\n</string>
+    <string name="Score.0">\tMot trouv\u00e9 sans erreur:.......100Pts\n</string>
+    <string name="Score.1">\tMot trouv\u00e9 avec 1 erreur:......50Pts\n</string>
+    <string name="Score.2">\tMot trouv\u00e9 avec 2 erreurs:.....35Pts\n</string>
+    <string name="Score.3">\tMot trouv\u00e9 avec 3 erreurs:.....25Pts\n</string>
+    <string name="Score.4">\tMot trouv\u00e9 avec 4 erreurs:.....15Pts\n</string>
+    <string name="Score.5">\tMot trouv\u00e9 avec 5 erreurs:.....10Pts\n</string>
+    <string name="Score.6">\tMot trouv\u00e9 avec 6 erreurs:......5Pts\n</string>
+    <string name="Score.Footer">Je vous souhaite bien du plaisir....\nEt, si vous pensez pouvoir trouver un mot en un coup,c\'est que vous pensez que le dictionnaire est petit !\nHors, pour votre information, il comprend plus de 336 000 mots... Donc bonne chance!!\n</string>
+
+    <string name="Game.nbFoundWords">Nombre de mots trouv\u00e9s %s</string>
+    <string name="Game.score">Votre score actuel est de : %s</string>
+    <string name="Game.picture.0">pictures/0.jpg</string>
+    <string name="Game.picture.1">pictures/1.jpg</string>
+    <string name="Game.picture.2">pictures/2.jpg</string>
+    <string name="Game.picture.3">pictures/3.jpg</string>
+    <string name="Game.picture.4">pictures/4.jpg</string>
+    <string name="Game.picture.5">pictures/5.jpg</string>
+    <string name="Game.picture.6">pictures/6.jpg</string>
+    <string name="Game.picture.7">pictures/7.jpg</string>
+
+
+
+</resources>
