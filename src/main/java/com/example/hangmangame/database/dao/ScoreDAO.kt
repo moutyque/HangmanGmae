@@ -12,7 +12,7 @@ interface ScoreDAO {
     fun getAll(): List<Score>
 
     @Query("SELECT * FROM scores WHERE pseudo IN (:psuedo)")
-    fun find(psuedo: String): List<Score>
+    fun get(psuedo: String): List<Score>
 
 
     @Insert
