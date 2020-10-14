@@ -14,18 +14,24 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-    android {
 
-        buildFeatures {
-            dataBinding = true
-            // for view binding:
-            viewBinding = true
-        }
-        packagingOptions {
-            exclude 'META-INF/atomicfu.kotlin_module'
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
         }
     }
+
+
+    buildFeatures {
+        dataBinding = true
+        // for view binding:
+        viewBinding = true
+    }
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+
 
     buildTypes {
         release {

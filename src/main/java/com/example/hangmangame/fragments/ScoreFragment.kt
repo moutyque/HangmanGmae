@@ -1,16 +1,24 @@
 package com.example.hangmangame.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
+import com.example.hangmangame.ScoreRepository
+import com.example.hangmangame.database.AppDataBase
+import com.example.hangmangame.viewmodels.ScoreViewModel
 import com.example.hangmangmae.R
+import com.example.hangmangmae.databinding.FragmentScoreBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 
 /**
  * A simple [Fragment] subclass.
@@ -18,6 +26,15 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ScoreFragment : Fragment() {
+
+    private val scoreViewModel: ScoreViewModel by lazy {
+        val activity = requireNotNull(this.activity) {
+            "You can only access the viewModel after onActivityCreated()"
+        }
+        ViewModelProvider(this, ScoreViewModel.Factory(activity.application))
+            .get(ScoreViewModel::class.java)
+    }
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,12 +51,22 @@ class ScoreFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_score, container, false)
+
+
+        inflater.inflate(R.layout.fragment_score, container, false)
+        //Le nom de la class de binding correspond au nom du XML et pas de la class Kotlin
+        var binding = FragmentScoreBinding.inflate(inflater)
+        binding.setLifecycleOwner(viewLifecycleOwner)
+
+        Log.i("ScoreFragment", scoreViewModel.score.value.toString())
+
+        binding.scores = scoreViewModel
+        return binding.root
     }
 
+
     companion object {
-        /**
+        /**as
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
@@ -57,4 +84,6 @@ class ScoreFragment : Fragment() {
                 }
             }
     }
+
+
 }
